@@ -90,6 +90,7 @@ function undoRedoCanvas(trackObj) {
     let img = new Image();//new image reference element
     img.src = url;
     img.onload = (e) => {
+        tool.clearRect(0, 0, canvas.width, canvas.height);
         tool.drawImage(img, 0, 0, canvas.width, canvas.height);
     }
 
@@ -145,7 +146,6 @@ download.addEventListener("click", (e) => {
     a.download = "board.jpg";
     a.click();
 })
-
 
 
 
